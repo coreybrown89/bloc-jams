@@ -56,6 +56,11 @@ body {
 	color: rgb(233,50,117);
 }
 
+a.navbar-link:active {
+	color: rgb(233,50,117);
+	background-color: white;
+}
+
 .containter {
 	margin: 0 auto;
 	max-width: 64rem;
