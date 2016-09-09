@@ -28,6 +28,21 @@ var albumMarconi = {
 	]
  };
 
+ var albumSummerJams = {
+	title: 'Summer Jams',
+	artist: 'Small Town Kids',
+	label: 'Atlantic Records',
+	year: '2016',
+	albumArtUrl: 'assets/images/album_covers/03.png',
+	songs: [
+	 { title: '1st Day of Summer', duration: '3:45' },
+	 { title: 'The Water', duration: '4:21' },
+	 { title: 'By the River', duration: '3:21'},
+	 { title: 'Sounds of the Ocean', duration: '3:14' },
+	 { title: 'Take Out the Boat', duration: '2:15'}
+	]
+ };
+
 
 var createSongRow = function(songNumber, songName, songLength) {
 	// html song row template
@@ -69,7 +84,25 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+
+    var albumImage = document.getElementsByClassName('album-cover-art')[0];
+    
+    var albums = [albumSummerJams, albumMarconi, albumPicasso];
+    var which = 0;
+    
+    albumImage.addEventListener('click', function(event){
+    	setCurrentAlbum(albums[which]);
+    	which++;
+
+    	if (which == albums.length) {
+    		which = 0;
+    	}
+
+    });
+    
 };
+
+
 
 
 
