@@ -46,6 +46,7 @@ body.album {
 }
 .song-item-number {
 	width: 5%;
+	min-width: 30px;
 }
 .song-item-title {
 	width: 85%;
@@ -53,7 +54,24 @@ body.album {
 .song-item-duration {
 	width: 5%;
 }
-
+.album-song-button {
+	text-align: center;
+	font-size: 14px;
+	background-color: white;
+	color: rgb(210, 40, 123);
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+}
+.album-song-button:hover {
+	cursor: pointer;
+	color: white;
+	background-color: rgb(210, 40, 123);
+}
+.album-song-button span {
+	line-height: 28px;
+}
 
 /* Queries */
 @media (max-width: 640px) and (min-height: 320px) {
