@@ -125,7 +125,7 @@ window.onload = function() {
   		 	case 'album-song-button':
   		 	case 'ion-play':
   		 	case 'ion-pause':
-  		 		return findParentByClassName(element, '.song-item-number');
+  		 		return findParentByClassName(element, 'song-item-number');
   		 	case 'album-view-song-item':
   		 		return element.querySelector('.song-item-number');
   		 	case 'song-item-title':
